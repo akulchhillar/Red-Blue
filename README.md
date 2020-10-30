@@ -11,7 +11,7 @@
 
 ## About the Project
 
-Hi All, this a Python (Flask) &amp; JS based board game which leverages web hooks for communication. You can play it here: https://red-blue.herokuapp.com/
+This a Python3 (Flask) &amp; JS based board game which leverages Webhooks for communication. You can play it [here](https://red-blue.herokuapp.com/) 
 
 ### Built With
 
@@ -23,6 +23,9 @@ Hi All, this a Python (Flask) &amp; JS based board game which leverages web hook
 ### Prerequisites
 
 to install this projects dependancies, navigate to the project directory and execute `pip3 install -r requirements.txt`
+
+After you've installed the dependancies, you can run the project by simply running `python3 app.py` which will launch the Flask development server.
+Note: The flask development server is meant for development only and should not be used in production.
 
 ## Usage
 
