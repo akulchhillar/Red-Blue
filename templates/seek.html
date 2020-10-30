@@ -1,0 +1,126 @@
+<html>
+
+<head>
+    <title>Hide & Seek</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css" integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous">
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    
+    
+</head>
+<body>
+<div class="container">
+
+    <div class="row col-6 col-sm-6" style="margin-left: 1%;">
+        <p class="h6" style="margin-top: 2%;" id="turn"></p>
+        
+        
+    </div>
+    
+    <div class="row col-6" style="margin-left: 1%;">
+        <p class="h6" id="red-score">Red:</p>
+        
+    </div>
+    <div class="row col-6" style="margin-left: 1%;">
+        <p class="h6" id="blue-score">Blue:</p>
+        
+    </div>
+
+    <div class="row">
+        <div class="col-12 col-sm-12 col-md-12 col-lg-8 col-xl-8" id="board" style=" margin-top: 1%;">
+            <button type="button" class="btn btn-link" id="1"></button>
+            <button type="button" class="btn btn-link" id="2"></button>
+            <button type="button" class="btn btn-link" id="3"></button>
+            <button type="button" class="btn btn-link" id="4"></button>
+            <button type="button" class="btn btn-link" id="5"></button>
+            <button type="button" class="btn btn-link" id="6"></button>
+            <button type="button" class="btn btn-link" id="7"></button>
+            <button type="button" class="btn btn-link" id="8"></button>
+            
+            <button type="button" class="btn btn-link" id="9"></button>
+            <button type="button" class="btn btn-link" id="10"></button>
+            <button type="button" class="btn btn-link" id="11"></button>
+            <button type="button" class="btn btn-link" id="12"></button>
+            <button type="button" class="btn btn-link" id="13"></button>
+            <button type="button" class="btn btn-link" id="14"></button>
+            <button type="button" class="btn btn-link" id="15"></button>
+            <button type="button" class="btn btn-link" id="16"></button>
+
+            <button type="button" class="btn btn-link" id="17"></button>
+            <button type="button" class="btn btn-link" id="18"></button>
+            <button type="button" class="btn btn-link" id="19"></button>
+            <button type="button" class="btn btn-link" id="20"></button>
+            <button type="button" class="btn btn-link" id="21"></button>
+            <button type="button" class="btn btn-link" id="22"></button>
+            <button type="button" class="btn btn-link" id="23"></button>
+            <button type="button" class="btn btn-link" id="24"></button>
+
+            <button type="button" class="btn btn-link" id="25"></button>
+            <button type="button" class="btn btn-link" id="26"></button>
+            <button type="button" class="btn btn-link" id="27"></button>
+            <button type="button" class="btn btn-link" id="28"></button>
+            <button type="button" class="btn btn-link" id="29"></button>
+            <button type="button" class="btn btn-link" id="30"></button>
+            <button type="button" class="btn btn-link" id="31"></button>
+            <button type="button" class="btn btn-link" id="32"></button>
+
+            <button type="button" class="btn btn-link" id="33"></button>
+            <button type="button" class="btn btn-link" id="34"></button>
+            <button type="button" class="btn btn-link" id="35"></button>
+            <button type="button" class="btn btn-link" id="36"></button>
+            <button type="button" class="btn btn-link" id="37"></button>
+            <button type="button" class="btn btn-link" id="38"></button>
+            <button type="button" class="btn btn-link" id="39"></button>
+            <button type="button" class="btn btn-link" id="40"></button>
+
+            <button type="button" class="btn btn-link" id="41"></button>
+            <button type="button" class="btn btn-link" id="42"></button>
+            <button type="button" class="btn btn-link" id="43"></button>
+            <button type="button" class="btn btn-link" id="44"></button>
+            <button type="button" class="btn btn-link" id="45"></button>
+            <button type="button" class="btn btn-link" id="46"></button>
+            <button type="button" class="btn btn-link" id="47"></button>
+            <button type="button" class="btn btn-link" id="48"></button>
+
+            <button type="button" class="btn btn-link" id="49"></button>
+            <button type="button" class="btn btn-link" id="50"></button>
+            <button type="button" class="btn btn-link" id="51"></button>
+            <button type="button" class="btn btn-link" id="52"></button>
+            <button type="button" class="btn btn-link" id="53"></button>
+            <button type="button" class="btn btn-link" id="54"></button>
+            <button type="button" class="btn btn-link" id="55"></button>
+            <button type="button" class="btn btn-link" id="56"></button>
+
+            <button type="button" class="btn btn-link" id="57"></button>
+            <button type="button" class="btn btn-link" id="58"></button>
+            <button type="button" class="btn btn-link" id="59"></button>
+            <button type="button" class="btn btn-link" id="60"></button>
+            <button type="button" class="btn btn-link" id="61"></button>
+            <button type="button" class="btn btn-link" id="62"></button>
+            <button type="button" class="btn btn-link" id="63"></button>
+            <button type="button" class="btn btn-link" id="64"></button>
+
+        </div>
+        <div class="col-12 col-sm-12 col-md-12 col-lg-4 col-xl-4" id="instructions" style="margin-top: 1%; ">
+           <b>Instructions (Please Do NOT Refresh the page or you would lose the entire progress and would be required to start from scratch.)</b> 
+            
+                <p>The game is played between 2 players <i>(Red & Blue)</i> and the objetive of the game is to capture the maximum number of green squares and convert them into their color. </p>
+                <p>The game starts with Red player making the first move by clicking on any square on the empty green borad. And then the Blue player makes his move.</p>
+                <p>Everytime you click a square, the squares adjacent to it in all the directions are convert into your color.</p>
+                <p>The players can only click on empty green sqaures and not on other player's captured square.</p>
+                <p>The game is won when all the squares are captured by both the players and the player with maximum sqaure of his color wins.</p>
+           
+                </div>
+    </div>
+
+
+</div>
+</body>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.1/socket.io.js"></script>
+
+<script src="{{ url_for('static', filename='myscript.js') }}" type="module"></script>
+
+
+
+
+
+</html>
